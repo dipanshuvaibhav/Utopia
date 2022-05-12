@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utopia - Best Apparels Online Store</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/contactus.css">
+    <link rel="stylesheet" href="static/css/chat.css">
+    <link rel="stylesheet" href="css/popup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <div class="popup" id="popup">
+        <button id="close">&times;</button>
+        <h2>Welcome To Utopia</h2>
+        <p>
+            AVAIL 20% DISCOUNT ON YOUR FIRST ORDER, Use coupon code "UTOPIAWORLD20".
+        </p>
+        <a href="login.html">Let's Go</a>
+    </div>
+
+
+    <nav class="navbar"></nav>
+
+    <!-- hero section -->
+    <header class="hero-section" style="z-index:-1;">
+        <div class="content" >
+           <img src="img/light-logo.png" class="logo" alt="">
+        </div>
+    </header>
+
+    <!-- <section id="men-tshirt-products"></section> -->
+
+    <!-- collections -->
+    <section class="collection-container">
+        <a href="#" class="collection">
+            <img src="img/women-collection.png" alt="">
+            <p class="collection-title">women <br> apparels</p>
+        </a>
+        <a href="#" class="collection">
+            <img src="img/men-collection.png" alt="">
+            <p class="collection-title">men <br> apparels</p>
+        </a>
+        <a href="#" class="collection">
+            <img src="img/accessories-collection.png" alt="">
+            <p class="collection-title">accessories</p>
+        </a>
+    </section>
+    
+    <section id="men-tshirt-products-2"></section>
+
+    <!-- image collage section -->
+    <section class="image-mid-section">
+        <div class="image-collage">
+            <div class="image-collection">
+                <img src="img/s2.jpg" class="collage-img" alt="">
+                <img src="img/s1.jpg" class="collage-img" alt="">
+                <img src="img/s3.jpg" class="collage-img" alt="">
+            </div>
+        </div>
+    </section>
+    
+    
+
+    <!-- review section -->
+    <section class="review-section">
+        <h1 class="section-title">what our <span>customers</span> says about us</h1>
+        <div class="review-container">
+            <div class="review-card">
+                <div class="user-dp" data-rating="4.9"><img src="img/user 1.png" alt=""></div>
+                <h2 class="review-title">best quality more than my expectation</h2>
+                <p class="review">Very good platform for online shopping cost are low and product is good. And the product is also valuable. Brand also available here.</p>
+            </div>
+            <div class="review-card">
+                <div class="user-dp" data-rating="4.9"><img src="img/user 2.png" alt=""></div>
+                <h2 class="review-title">on time delivery with best packaging</h2>
+                <p class="review">Fast and reasonable quotation, delivery boy turned up promptly and delivered the goods quickly as promise. Will use again and would definitely recommend to others..</p>
+            </div>
+            <div class="review-card">
+                <div class="user-dp" data-rating="4.9"><img src="img/user 3.png" alt=""></div>
+                <h2 class="review-title">very helpful customer support</h2>
+                <p class="review">Amazing service, arrived early, delivered perfectly on-time. Polite, friendly and accommodating in difficult times, and very reasonably priced.</p>
+            </div>
+            <div class="review-card">
+                <div class="user-dp" data-rating="4.9"><img src="img/user 4.png" alt=""></div>
+                <h2 class="review-title">very easy to refund/return products</h2>
+                <p class="review">The products are very good in utopia. I love it, nice colorurs and nice products.</p>
+            </div>
+        </div>
+    </section>
+    <div class="chat-bar-collapsible">
+        <button id="chat-button" type="button" class="collapsible">Chat with us!
+            <i id="chat-icon" style="color: #fff;" class="fa fa-fw fa-comments-o"></i>
+        </button>
+
+        <div class="content" style="z-index: 200;">
+            <div class="full-chat-block">
+                <!-- Message Container -->
+                <div class="outer-container">
+                    <div class="chat-container">
+                        <!-- Messages -->
+                        <div id="chatbox">
+                            <h5 id="chat-timestamp"></h5>
+                            <p id="botStarterMessage" class="botText"><span>Loading...</span></p>
+                        </div>
+
+                        <!-- User input box -->
+                        <div class="chat-bar-input-block">
+                            <div id="userInput">
+                                <input id="textInput" class="input-box" type="text" name="msg"
+                                    placeholder="Tap 'Enter' to send a message">
+                                <p></p>
+                            </div>
+
+                            <div class="chat-bar-icons">
+                                <i id="chat-icon" style="color: crimson;" class="fa fa-fw fa-heart"
+                                    onclick="heartButton()"></i>
+                                <i id="chat-icon" style="color: #333;" class="fa fa-fw fa-send"
+                                    onclick="sendButton()"></i>
+                            </div>
+                        </div>
+
+                        <div id="chat-bar-bottom">
+                            <p></p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- contact us section -->
+    <!--<p><a href="#contact-id">click here for the contact form</a></p> -->
+	<div class="contact" id="contact-id">
+		<section><a href="#!">[ close ]</a></section>
+		<form action="/ajax/email" class="contact-form" method="POST" onsubmit="return submitEmailForm(this);">
+			<div>
+				<input type="text" name="name" placeholder="name" class="contact-form-input" required />
+			</div>
+			<div>
+				<input type="email" name="email" placeholder="email" class="contact-form-input" required />
+			</div>
+			<div>
+				<textarea name="message" class="contact-form-input" placeholder="MESSAGE" required></textarea>
+			</div>
+			<div>
+				<button type="submit" onclick="myFunction()">Send</a></button>
+                <button type="reset" onclick="document.getElementByClass('contact-form-input').value=''">Reset</a></button>
+			</div>
+		</form>
+	</div>
+
+    <footer></footer>
+
+    <script src="js/nav.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/home1.js"></script>
+    <script src="js/contactus.js"></script>
+    
+	
+
+    <script>
+        getProducts('T-shirt').then(data => {
+            
+            createProductSlider(data, '#men-tshirt-products', 'Men T-shirt')
+        })
+        getProducts('Men').then(data => createProductSlider(data, '#men-tshirt-products-2', 'Men T-shirt'))
+
+       function myFunction() {
+        alert("Message Sent Successfully!");
+        }
+
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="static/scripts/responses.js"></script>
+    <script src="static/scripts/chat.js"></script>
+    <script type="text/javascript">
+        window.addEventListener("load", function(){
+            setTimeout(
+                function open(event){
+                    document.querySelector(".popup").style.display = "block";
+                },
+                2000 
+            )
+        });
+        
+        
+        document.querySelector("#close").addEventListener("click", function(){
+            document.querySelector(".popup").style.display = "none";
+        });
+            </script>
+</body>
+</html>
